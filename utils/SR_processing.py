@@ -34,7 +34,8 @@ class SR_processing:
         """
         print('Processing Smartphone Data ... ', end='')
         # merge acceleration, gps and gyro data
-        df = mergeData(self.inFiles, dt=self.dt, col_keywords=["local", "timestamp"], new_col_name="local_timestamp_utc", GoPro=False)
+        df = mergeData(self.inFiles, dt=self.dt, col_keywords=[
+                       "local", "timestamp"], new_col_name="local_timestamp_utc", GoPro=False)
         # compute BBI
         df = computeBBI(df, zero_range=[0, 10], lowpass_alpha=self.lowpassAlpha, x_acc_label='accel_y_mps2', y_acc_label='accel_x_mps2')
         # Check if radius calculation need to have the sign flipped

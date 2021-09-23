@@ -84,6 +84,7 @@ def mergeData(inFiles, dt=0.25, col_keywords=["local", "timestamp"], new_col_nam
             print("One of the DataFrame does not have local_timestamp column")
             exit(0)
         allDataFrames[i] = df.rename(columns={col_name: column_rename_to})
+
     df_final = reduce(lambda left, right: pd.merge(left, right, on=column_rename_to, how='outer'), allDataFrames)
 
     # Resample to time interval
