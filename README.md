@@ -1,6 +1,3 @@
 # tsai-ML-curve-safety
 
-Relevant packages:
-Geopandas
-Pandas
-Seaborn
+## Install anaconda and then run conda env create -f requirements.yml and then conda activate curve_sign_design

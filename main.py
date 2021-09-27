@@ -10,6 +10,8 @@ if __name__ == '__main__':
 
     loc = pd.read_csv(r'2021_03_11_07_36_21_506_loc.csv')
     acc = pd.read_csv(r'2021_03_11_07_36_21_506_acc.csv')
+    print(acc)
+    print(acc.shape)
     crash = pd.read_csv(r'Crashdata.csv')
     # Chooses certain columns
     crash = crash.filter(items=['Road_Name', 'KABCO_Seve', 'Manner_of_', 'Location_a', 'Latitude', 'Longitude'])
